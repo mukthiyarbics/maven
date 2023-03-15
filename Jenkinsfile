@@ -10,7 +10,7 @@ node('built-in')
 	}
     stage('Continuous Deployment') 
 	{
-sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   root@192.168.7.25:/var/lib/httpd/webapps/qaenv.war'
+sh label: '', script: 'scp /var/lib/jenkins/workspace/dev_project1/webapp/target/webapp.war   root@192.168.7.25:/etc/httpd/webapps/qaenv.war'
 	}
     stage('Continuous Testing') 
 	{
