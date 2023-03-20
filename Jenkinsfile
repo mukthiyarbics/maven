@@ -10,7 +10,7 @@ node('built-in')
 	}
     stage('Continuous Deployment') 
 	{
-sh label: '', script: 'scp /var/lib/jenkins/workspace/dev_project1/webapp/target/webapp.war   root@192.168.7.25:'
+sh label: '', script: 'scp /var/lib/jenkins/workspace/dev_project1/webapp/target/webapp.war   mahi@192.168.7.25:/opt'
 	}
     stage('Continuous Testing') 
 	{
